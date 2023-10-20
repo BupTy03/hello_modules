@@ -1,5 +1,6 @@
+# Понадобится новая версия CMake 3.28: https://cmake.org/download/
 cmake_minimum_required(VERSION 3.28)
-project(TestModernModules CXX)
+project(hello_modules CXX)
 
 # Turning off extensions avoids and issue with the clang 16 compiler
 # clang 17 and greater can avoid this setting
@@ -27,5 +28,5 @@ target_sources(shapes
 # Create an executable
 add_executable(hello_modules main.cxx)
 
-# Link to the library foo
+# Link to the library shapes
 target_link_libraries(hello_modules shapes)
